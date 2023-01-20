@@ -2,8 +2,8 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { getAllPostIds, getPostData } from "../../../src/util";
 
-export default async function Page({ params: { id } }) {
-  const postData = await getData(id);
+export default async function Page({ params: { id } }: any) {
+  const postData: any = await getData(id);
 
   return (
     <div>
