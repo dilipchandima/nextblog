@@ -7,19 +7,6 @@ import html from "remark-html";
 export function getAllPostIds() {
   const fileNames = fs.readdirSync("src/posts");
 
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'ssg-ssr'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'pre-rendering'
-  //     }
-  //   }
-  // ]
   return fileNames.map((fileName) => {
     return {
       params: {

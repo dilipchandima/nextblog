@@ -2,8 +2,9 @@ import Link from "next/link";
 import React from "react";
 import { getAllPostIds } from "../../src/util";
 
-export default function Post({ paths }) {
-  console.log(paths);
+export default async function Post() {
+  const paths = await getData();
+
   return (
     <div>
       {paths.map(({ params: { id } }) => (
@@ -15,13 +16,8 @@ export default function Post({ paths }) {
   );
 }
 
-export async function getStaticProps({}) {
+async function getData() {
   const paths = await getAllPostIds();
 
-  console.log(paths);
-  return {
-    props: {
-      paths,
-    },
-  };
+  return paths;
 }
