@@ -1,22 +1,12 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { getAllPostIds, getPostData } from "../../../src/util";
+import Test from "./test";
 
 export default async function Page({ params: { id } }: any) {
   const postData: any = await getData(id);
 
-  return (
-    <div>
-      <article className="prose prose-slate">
-        titleeeeeee={postData.title}
-        <br />
-        id------{postData.id}
-        <br />
-        date --------{postData.date}
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </div>
-  );
+  return <Test postData={postData} />;
 }
 
 //https://beta.nextjs.org/docs/data-fetching/generating-static-params
@@ -32,5 +22,6 @@ async function getData(id: string) {
   const paths = await getAllPostIds();
   paths.map((x) => console.log("-----", x));
   const postData = await getPostData(id);
+
   return postData;
 }
