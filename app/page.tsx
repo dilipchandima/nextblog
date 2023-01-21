@@ -12,7 +12,11 @@ export default function Page() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>index</main>
+      <main>
+        <h1 className="text-2xl md:text-5xl lg:text-9xl font-bold">
+          Hello, Next.js!
+        </h1>
+      </main>
     </>
   );
 }

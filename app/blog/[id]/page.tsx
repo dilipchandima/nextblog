@@ -7,12 +7,14 @@ export default async function Page({ params: { id } }: any) {
 
   return (
     <div>
-      titleeeeeee={postData.title}
-      <br />
-      id------{postData.id}
-      <br />
-      date --------{postData.date}
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <article className="prose prose-slate">
+        titleeeeeee={postData.title}
+        <br />
+        id------{postData.id}
+        <br />
+        date --------{postData.date}
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </article>
     </div>
   );
 }

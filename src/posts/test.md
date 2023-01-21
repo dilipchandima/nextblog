@@ -60,3 +60,25 @@ Once the build has run to completion, a successful build will generate an email 
 Now you can configure your mobile application development process with Visual Studio App Center !!!!
 
 Images - [Visual Studio App Center Documentation](https://visualstudio.microsoft.com/app-center/get-started/)
+
+```
+yarn start
+```
+
+```js
+
+document.querySelector('.container').appendChild(multi)
+    }
+var Equalizadores = document.querySelectorAll('.channel')
+       function play() {
+           Equalizadores.forEach(canal => {
+           let altura = Math.floor(Math.random() * 95 +1)
+           canal.style.height = altura+'%'
+       })
+       }
+
+           var run = setInterval(play, 100)
+
+
+
+```
