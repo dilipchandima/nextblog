@@ -11,8 +11,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            // color: theme("colors.primary"),
-            // color: "#FFFFFF",
+            color: theme("colors.slate.400"),
           },
         },
       }),

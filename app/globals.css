@@ -5,3 +5,31 @@
 .hljs {
   background: transparent !important;
 }
+
+.prose code {
+  color: #e2e8f0;
+}
+.prose h1 {
+  color: #e2e8f0;
+}
+.prose h2 {
+  color: #e2e8f0;
+}
+.prose h3 {
+  color: #e2e8f0;
+}
+.prose h4 {
+  color: #e2e8f0;
+}
+.prose h5 {
+  color: #e2e8f0;
+}
+.prose a {
+  color: #26abb5;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.prose strong {
+  color: #26abb5;
+}

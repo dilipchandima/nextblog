@@ -12,7 +12,8 @@ export default function Test({ postData }: any) {
 
   return (
     <div>
-      <article className="prose prose-slate">
+      {/* <article className="lg:prose prose-2xl prose prose-slate mx-auto"> */}
+      <article className="prose prose-slate mx-auto">
         titleeeeeee={postData.title}
         <br />
         id------{postData.id}
