@@ -1,5 +1,6 @@
 ---
 title: Markdown/MDX with Next.js
+description: The project has been created to provide a new level of interaction between Mad Paws' customers and pet sitters.
 author: Lee Robinson
 date: 12/01/2023
 ---

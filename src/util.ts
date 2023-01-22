@@ -16,6 +16,20 @@ export function getAllPostIds() {
   });
 }
 
+export async function getAllPostTileData() {
+  const fileNames = fs.readdirSync("src/posts");
+
+  const params = [];
+  for (const id of fileNames) {
+    const fullPath = path.join("src/posts", id);
+    const fileContents = await fs.readFileSync(fullPath, "utf8");
+    const matterResult = await matter(fileContents);
+    params.push({ ...matterResult.data, id });
+  }
+
+  return params;
+}
+
 export async function getPostData(id: string) {
   const fullPath = path.join("src/posts", `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");

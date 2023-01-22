@@ -12,7 +12,7 @@ export default function RootLayout({
       <body className="bg-slate-900">
         <Navbar />
         <div className="lg:container mx-auto text-slate-400 pt-20">
-          {children}
+          <div className="min-h-screen">{children}</div>
           <h2>footer</h2>
         </div>
       </body>

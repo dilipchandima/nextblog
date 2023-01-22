@@ -1,23 +1,20 @@
 import Link from "next/link";
 import React from "react";
-import { getAllPostIds } from "../../src/util";
+import BlogTiles from "../../components/BlogTiles";
+import { getAllPostIds, getAllPostTileData } from "../../src/util";
 
 export default async function Post() {
   const paths = await getData();
-
+  console.log(paths);
   return (
-    <div>
-      {paths.map(({ params: { id } }) => (
-        <Link key={id} href={`/blog/${id}`}>
-          <h1>{id}</h1>
-        </Link>
-      ))}
+    <div className="my-16">
+      <BlogTiles blogs={paths} />
     </div>
   );
 }
 
 async function getData() {
-  const paths = await getAllPostIds();
+  const paths = await getAllPostTileData();
 
   return paths;
 }

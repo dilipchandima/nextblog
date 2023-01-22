@@ -7,9 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <h1>blog header</h1>
+      {/* <h1>blog header</h1> */}
       {children}
-      <h2>blog footer</h2>
+      {/* <h2>blog footer</h2> */}
     </>
   );
 }

@@ -11,14 +11,9 @@ export default function Test({ postData }: any) {
   }, []);
 
   return (
-    <div>
-      {/* <article className="lg:prose prose-2xl prose prose-slate mx-auto"> */}
-      <article className="prose prose-slate mx-auto">
-        titleeeeeee={postData.title}
-        <br />
-        id------{postData.id}
-        <br />
-        date --------{postData.date}
+    <div className="pt-20">
+      <article className="prose  mx-auto">
+        <h1>{postData.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </div>
