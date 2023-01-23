@@ -9,7 +9,7 @@ const links = [
   { name: "Blog", link: "/blog" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ toggleMode }: any) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,6 +30,12 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+        <div
+          className="bg-slate-900 w-9 h-9"
+          onClick={() => {
+            toggleMode();
+          }}
+        ></div>
       </div>
 
       <div
