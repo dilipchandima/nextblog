@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
 
-const BlogTiles = ({ blogs }) => {
+const BlogTiles = ({ blogs }: any) => {
   return (
     <div className="flex flex-wrap">
-      {blogs.map(({ id, title, date, description }) => (
+      {blogs.map(({ id, title, date, description }: any) => (
         <div
           className="w-full md:w-2/4 lg:w-4/12 xl:w-3/12 p-6 rounded-xl"
           key={id}
