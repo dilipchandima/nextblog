@@ -8,13 +8,19 @@ type Props = {
 };
 
 export const AppContextProvider = ({ children }: Props) => {
-  const [{ isNavOpen }, dispatch] = useReducer(reducer, initialState);
+  const [{ isNavOpen, isDarkMode }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
-  const toggleNav = (isOpen: boolean) =>
-    dispatch({ type: types.TOGGLE_NAV, payload: isOpen });
+  const toggleNav = () => dispatch({ type: types.TOGGLE_NAV });
+
+  const toggleDarkMode = () => dispatch({ type: types.TOGGLE_DARK_MODE });
 
   return (
-    <AppContext.Provider value={{ isNavOpen, toggleNav }}>
+    <AppContext.Provider
+      value={{ isNavOpen, toggleNav, isDarkMode, toggleDarkMode }}
+    >
       {children}
     </AppContext.Provider>
   );

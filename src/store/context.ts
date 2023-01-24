@@ -1,11 +1,14 @@
 import { createContext } from "react";
 
-export type Context = {
-  isNavOpen: boolean;
-  toggleNav(isOpen: boolean): void;
-};
+import { initialState, Reducer } from "./reducer";
+
+export interface Context extends Reducer {
+  toggleNav(): void;
+  toggleDarkMode(): void;
+}
 
 export const AppContext = createContext<Context>({
-  isNavOpen: false,
+  ...initialState,
   toggleNav: () => {},
+  toggleDarkMode: () => {},
 });
