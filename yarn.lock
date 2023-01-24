@@ -1110,11 +1110,6 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-feather-icons-react@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/feather-icons-react/-/feather-icons-react-0.6.2.tgz#0f562b325b3e8ab2b936daf76e935fb9dcbd22c1"
-  integrity sha512-G677Y5nc3HzP1f5NNb5LJuZwKrI58BK4+/9O8Bl4naF9JixC+YL4trVom1F2ajnilq/EbU8JETPTNqvCzwH1qA==
-
 file-entry-cache@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-6.0.1.tgz#211b2dd9659cb0394b073e7323ac3c933d522027"
@@ -2482,6 +2477,11 @@ react-dom@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-icons@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
+  integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
 
 react-is@^16.13.1:
   version "16.13.1"

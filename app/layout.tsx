@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={mode ? "dark" : "light"}>
       <body className="bg-white dark:bg-slate-900">
-        <Navbar toggleMode={() => setMode(!mode)} />
+        <Navbar toggleMode={() => setMode(!mode)} mode={mode} />
         <div className="lg:container mx-auto text-slate-900 dark:text-slate-200 pt-20">
           <div className="min-h-screen">{children}</div>
           <h2>footer</h2>
