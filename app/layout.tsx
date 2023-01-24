@@ -5,6 +5,11 @@ import { useState } from "react";
 import Navbar from "../src/components/NavBar";
 
 import "./globals.css";
+import { Outfit } from "@next/font/google";
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+});
 
 export default function RootLayout({
   children,
@@ -14,7 +19,10 @@ export default function RootLayout({
   const [mode, setMode] = useState(true);
 
   return (
-    <html lang="en" className={mode ? "dark" : "light"}>
+    <html
+      lang="en"
+      className={`${outfit.variable} font-sans ${mode ? "dark" : "light"}`}
+    >
       <body className="bg-white dark:bg-slate-900">
         <Navbar toggleMode={() => setMode(!mode)} mode={mode} />
         <div className="lg:container mx-auto text-slate-900 dark:text-slate-200 pt-20">
