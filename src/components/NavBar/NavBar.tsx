@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 import { FiMenu, FiSun, FiMoon, FiX } from "react-icons/fi";
 
-import { useAppContext } from "../../store/useAppContext";
+import { useAppContext } from "~/store/useAppContext";
 
 const links = [
   { name: "Home", link: "/" },

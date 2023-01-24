@@ -4,8 +4,8 @@ import React, { ReactElement } from "react";
 
 import { Outfit } from "@next/font/google";
 
-import Navbar from "../components/NavBar/NavBar";
-import { useAppContext } from "../store/useAppContext";
+import Navbar from "~/components/NavBar/NavBar";
+import { useAppContext } from "~/store/useAppContext";
 
 const outfit = Outfit({
   subsets: ["latin"],
