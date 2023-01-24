@@ -20,11 +20,20 @@ export const ThemeToggler = (): ReactElement => {
         <div
           className={`fixed w-10 h-10 bg-gray-700 dark:bg-gray-300 rounded-[20px] text-gray-900 flex justify-center items-center `}
         >
-          {isDarkMode ? (
-            <FiMoon className="text-gray-700" size={30} strokeWidth={1.5} />
-          ) : (
-            <FiSun className="text-gray-300" size={30} strokeWidth={1.5} />
-          )}
+          <FiMoon
+            className={`absolute text-gray-700 ${
+              isDarkMode ? "scale-100" : "scale-0"
+            }  ease-in duration-300`}
+            size={30}
+            strokeWidth={1.5}
+          />
+          <FiSun
+            className={`absolute text-gray-300 ${
+              !isDarkMode ? "scale-100" : "scale-0"
+            }  ease-in duration-300`}
+            size={30}
+            strokeWidth={1.5}
+          />
         </div>
       </div>
     </div>
