@@ -13,16 +13,16 @@ const BlogTiles = ({ blogs }: any) => {
         >
           <Link href={`/blog/${id.replace(".md", "")}`}>
             <div
-              className="w-full border-2 p-6 rounded-xl border-cyan-800  hover:bg-slate-800 hover:border-cyan-600 transition duration-200"
+              className="w-full border-2 p-6 rounded-xl border-cyan-800  hover:bg-gray-800 hover:border-cyan-600 transition duration-200"
               key={id}
             >
               <h2 className="text-xl font-bold mb-6">{title}</h2>
               {image && (
                 <Image alt="sample" height={250} src={image} width={700} />
               )}
-              <p className="py-6 text-slate-400">{description}</p>
-              <p className="text-xs text-slate-600">{date}</p>
-              <p className="text-xs text-slate-600">{id.replace(".md", "")}</p>
+              <p className="py-6 text-gray-400">{description}</p>
+              <p className="text-xs text-gray-600">{date}</p>
+              <p className="text-xs text-gray-600">{id.replace(".md", "")}</p>
             </div>
           </Link>
         </div>

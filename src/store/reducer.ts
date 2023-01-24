@@ -4,7 +4,7 @@ export interface Reducer {
 }
 
 export const initialState: Reducer = {
-  isNavOpen: true,
+  isNavOpen: false,
   isDarkMode: true,
 };
 
