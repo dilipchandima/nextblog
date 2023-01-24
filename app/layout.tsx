@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Navbar from "../src/components/NavBar";
 
-import Navbar from "../components/NavBar";
 import "./globals.css";
 
 export default function RootLayout({

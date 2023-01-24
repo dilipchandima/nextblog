@@ -5,7 +5,7 @@ import { remark } from "remark";
 import html from "remark-html";
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync("src/posts");
+  const fileNames = fs.readdirSync("markdown/blog");
 
   return fileNames.map((fileName) => {
     return {
@@ -17,11 +17,11 @@ export function getAllPostIds() {
 }
 
 export async function getAllPostTileData() {
-  const fileNames = fs.readdirSync("src/posts");
+  const fileNames = fs.readdirSync("markdown/blog");
 
   const params = [];
   for (const id of fileNames) {
-    const fullPath = path.join("src/posts", id);
+    const fullPath = path.join("markdown/blog", id);
     const fileContents = await fs.readFileSync(fullPath, "utf8");
     const matterResult = await matter(fileContents);
     params.push({ ...matterResult.data, id });
@@ -31,7 +31,7 @@ export async function getAllPostTileData() {
 }
 
 export async function getPostData(id: string) {
-  const fullPath = path.join("src/posts", `${id}.md`);
+  const fullPath = path.join("markdown/blog", `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section

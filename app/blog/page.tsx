@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import BlogTiles from "../../components/BlogTiles";
+import BlogTiles from "../../src/components/BlogTiles";
 import { getAllPostIds, getAllPostTileData } from "../../src/util";
 
 export default async function Post() {

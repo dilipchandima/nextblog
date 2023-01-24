@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
+import Test from "../../../src/components/test";
 import { getAllPostIds, getPostData } from "../../../src/util";
-import Test from "../../../components/test";
 
 export default async function Page({ params: { id } }: any) {
   const postData: any = await getData(id);

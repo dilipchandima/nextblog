@@ -39,8 +39,8 @@ const Navbar = ({ toggleMode, mode }: any) => {
         <div
           className={
             open
-              ? "fixed left-0 top-0 w-full h-screen bg-gray-50 dark:bg-gray-900 p-10 ease-in duration-300"
-              : "fixed left-[-100%] top-0 w-full h-screen bg-gray-50 dark:bg-gray-900 p-10 ease-in duration-300"
+              ? "fixed left-0 top-0 w-full h-screen bg-gray-100 dark:bg-gray-800 p-10 ease-in duration-300"
+              : "fixed left-[-100%] top-0 w-full h-screen bg-gray-100 dark:bg-gray-800 p-10 ease-in duration-300"
           }
         >
           <div className="container mx-auto">
@@ -52,7 +52,7 @@ const Navbar = ({ toggleMode, mode }: any) => {
               <FiX
                 size={40}
                 strokeWidth={1}
-                className="text-gray-900 dark:text-gray-50"
+                className="text-gray-800 dark:text-gray-100"
               />
             </div>
             <div
@@ -62,9 +62,9 @@ const Navbar = ({ toggleMode, mode }: any) => {
               }}
             >
               {!mode ? (
-                <FiMoon size={40} strokeWidth={1} className="text-gray-900" />
+                <FiMoon size={40} strokeWidth={1} className="text-gray-800" />
               ) : (
-                <FiSun size={40} strokeWidth={1} className="text-gray-50" />
+                <FiSun size={40} strokeWidth={1} className="text-gray-100" />
               )}
             </div>
             <div></div>
@@ -72,7 +72,7 @@ const Navbar = ({ toggleMode, mode }: any) => {
               {links.map(({ name, link }) => (
                 <div key={name} className="py-6">
                   <Link
-                    className="text-3xl text-gray-900 dark:text-gray-50"
+                    className="text-3xl text-gray-800 dark:text-gray-100"
                     href={link}
                     onClick={() => {
                       setOpen(false);
