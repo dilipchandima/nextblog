@@ -1,9 +1,11 @@
 "use client";
 
 import React, { ReactElement } from "react";
+
+import { Outfit } from "@next/font/google";
+
 import Navbar from "../components/NavBar/NavBar";
 import { useAppContext } from "../store/useAppContext";
-import { Outfit } from "@next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -18,11 +20,11 @@ export const MainLayout = ({ children }: Props) => {
 
   return (
     <html
-      lang="en"
       className={`${outfit.variable} font-sans ${isNavOpen ? "dark" : "light"}`}
+      lang="en"
     >
       <body className="bg-white dark:bg-slate-900">
-        <Navbar toggleMode={() => toggleNav(!isNavOpen)} mode={isNavOpen} />
+        <Navbar mode={isNavOpen} toggleMode={() => toggleNav(!isNavOpen)} />
         <div className="lg:container mx-auto text-slate-900 dark:text-slate-200 pt-20">
           <div className="min-h-screen">{children}</div>
           <h2>footer</h2>

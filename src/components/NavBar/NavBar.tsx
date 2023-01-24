@@ -1,8 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import React from "react";
+
+import Link from "next/link";
 import { FiMenu, FiSun, FiMoon, FiX } from "react-icons/fi";
+
 import { useAppContext } from "../../store/useAppContext";
 
 const links = [
@@ -44,9 +46,9 @@ const Navbar = ({ toggleMode, mode }: any) => {
             }}
           >
             <FiX
+              className="text-gray-800 dark:text-gray-100"
               size={40}
               strokeWidth={1}
-              className="text-gray-800 dark:text-gray-100"
             />
           </div>
           <div
@@ -56,15 +58,15 @@ const Navbar = ({ toggleMode, mode }: any) => {
             }}
           >
             {!mode ? (
-              <FiMoon size={40} strokeWidth={1} className="text-gray-800" />
+              <FiMoon className="text-gray-800" size={40} strokeWidth={1} />
             ) : (
-              <FiSun size={40} strokeWidth={1} className="text-gray-100" />
+              <FiSun className="text-gray-100" size={40} strokeWidth={1} />
             )}
           </div>
           <div></div>
           <div className="flx flex-col">
             {links.map(({ name, link }) => (
-              <div key={name} className="py-6">
+              <div className="py-6" key={name}>
                 <Link
                   className="text-3xl text-gray-800 dark:text-gray-100 font-extralight"
                   href={link}
