@@ -31,12 +31,14 @@ Now you have to add the configuration to `config.js` file. You have add the stor
 
 Now you have to add the run script to the `package.json` file for run the Storybook server. Add the following script to your file.
 
-{  
- "scripts":  
- {  
- "storybook": "start-storybook -p 9001 -c .storybook"  
- }  
+```
+{
+ "scripts":
+ {
+ "storybook": "start-storybook -p 9001 -c .storybook"
+ }
 }
+```
 
 Congratulations, Now you finish all the configurations. Let’s Start the coding for your components :) for that create a folder in `src` called `storybook` and create `index.js` file for your stories. Then you folder structure looks like this,
 

@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 import { useAppContext } from "~/store/useAppContext";
+import { Tag } from "~/components/Tag";
 
 // title: "Are you seeking for build your app on cloud.",
 //     author: "Dileepa Chandima",
@@ -37,7 +38,7 @@ export const BlogTile = ({
           {date}
         </span>
         <h2 className="font-semibold text-2xl">{title}</h2>
-        <p className="text-gray-700 dark:text-gray-300 mt-3">{tags}</p>
+        <Tag tags={tags} />
       </Link>
     </div>
   );

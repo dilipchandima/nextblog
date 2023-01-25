@@ -1,16 +1,12 @@
 import React from "react";
 
-import Test from "~/components/test";
-import {
-  getAllMarkdownDocMeta,
-  getAllMarkdownFileNames,
-  readSingleMarkdownDoc,
-} from "~/util";
+import MarkDown from "~/components/Markdown";
+import { getAllMarkdownDocMeta, readSingleMarkdownDoc } from "~/util";
 
 export default async function Page({ params: { id } }: any) {
   const postData: any = await getData(id);
 
-  return <Test postData={postData} />;
+  return <MarkDown postData={postData} />;
 }
 
 export async function generateStaticParams() {

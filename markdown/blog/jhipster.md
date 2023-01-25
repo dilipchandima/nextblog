@@ -5,9 +5,10 @@ date: 12/01/2023
 category: TECH
 tags: java, jhipster, micro-services
 slug: why-micro-services-from-scratch-jhipster-is-the-solution-for-generate-develop-and-deploy
+image: /images/jhipster.jpeg
 ---
 
-![Alt Text]({static}/images/jhipster.jpeg)
+![Alt Text](/images/jhipster.jpeg)
 
 Yes, I know most of you reading my article is software developers who are using Spring Boot, micro-services architecture for your day to day development. But this is the time to change from developing from the scratch. Java Hipster (JHipster) helps you to generate, develop and deploy your Spring Boot + Angular web applications and micro-services with few simple commands. Using JHipster will reduce your development hours and not only the generating micro-services but with using JDL Studio you can define data models and generate the CRUD operations for defined Data Models.
 

@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { FiChevronLeft } from "react-icons/fi";
 
+import BlogTiles from "~/components/BlogTiles";
+import { getAllMarkdownDocMeta } from "~/util";
+
 type Props = {
   children: React.ReactNode;
 };
 
-export default function RootLayout({ children }: Props) {
+export default async function RootLayout({ children }: Props) {
+  const paths = await (await getData()).slice(0, 4);
+
   return (
     <>
       <Link
@@ -16,7 +21,16 @@ export default function RootLayout({ children }: Props) {
       </Link>
 
       {children}
-      <h2>blog footer</h2>
+      <div className="bg-gray-100 dark:bg-gray-800 mt-20 mb-20 py-14 px-10 rounded-2xl">
+        <h3 className="text-center text-2xl mb-10">Latest Articles</h3>
+        <BlogTiles blogs={paths} />
+      </div>
     </>
   );
+}
+
+async function getData() {
+  const paths = await getAllMarkdownDocMeta("blog");
+
+  return paths;
 }

@@ -7,7 +7,7 @@ tags: react, react-native, storybook, components
 slug: getting-started-with-storybook
 ---
 
-![Alt Text]({static}/images/storybook.gif)
+![Alt Text](/images/storybook.gif)
 
 Storybook is a UI development environment and playground for UI components. This tool enables users to create components independently and showcase components interactively in an isolated development environment.
 
@@ -15,7 +15,7 @@ Storybook runs outside of your main app so developers can develop UI components 
 
 Storybook supports many different frontend view layers with more coming!
 
-![Alt Text]({static}/images/frontend.png)
+![Alt Text](/images/frontend.png)
 
 React, Angular, Vue, Mithril, Marko, HTML, Svelte, Meteor, and Ember are currently supported.
 

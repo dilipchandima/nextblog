@@ -10,7 +10,7 @@ export const TopNav = () => {
 
   return (
     <div className=" container mx-auto flex justify-between items-center w-full h-full text-gray-900 dark:text-gray-50">
-      <Link className="text-xl font-thin" href="/">
+      <Link className="text-xl" href="/">
         Dileepa Chandima
       </Link>
       <FiMenu size={40} strokeWidth={1} onClick={toggleNav} />
