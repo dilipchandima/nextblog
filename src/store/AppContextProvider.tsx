@@ -13,13 +13,20 @@ export const AppContextProvider = ({ children }: Props) => {
     initialState
   );
 
+  const navLinks = [
+    { name: "HOME", link: "/" },
+    { name: "ABOUT ME", link: "/about" },
+    { name: "PROJECTS", link: "/about" },
+    { name: "GALLERY", link: "/blog" },
+  ];
+
   const toggleNav = () => dispatch({ type: types.TOGGLE_NAV });
 
   const toggleDarkMode = () => dispatch({ type: types.TOGGLE_DARK_MODE });
 
   return (
     <AppContext.Provider
-      value={{ isNavOpen, toggleNav, isDarkMode, toggleDarkMode }}
+      value={{ isNavOpen, toggleNav, isDarkMode, toggleDarkMode, navLinks }}
     >
       {children}
     </AppContext.Provider>

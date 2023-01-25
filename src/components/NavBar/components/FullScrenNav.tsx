@@ -1,24 +1,19 @@
 "use client";
 import React from "react";
 
-import Link from "next/link";
-import { FiMenu, FiSun, FiMoon, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 
 import { useAppContext } from "~/store/useAppContext";
 
+import { BlogTile } from "./BlogTile";
 import { NavLink } from "./NavLink";
 import { NavTitle } from "./NavTitle";
 import { ThemeToggler } from "./ThemeToggler";
 
-const menuItems = [
-  { name: "HOME", link: "/" },
-  { name: "PROJECTS", link: "/about" },
-  { name: "GALLERY", link: "/blog" },
-];
-
 export const FullScreenNav = () => {
-  const { isNavOpen, toggleNav, isDarkMode, toggleDarkMode } = useAppContext();
+  const { isNavOpen, toggleNav, navLinks } = useAppContext();
 
+  console.log(navLinks);
   return (
     <div
       className={`fixed top-0 w-full h-screen bg-gray-100 dark:bg-gray-800 p-10 ease-in duration-300 ${
@@ -33,11 +28,19 @@ export const FullScreenNav = () => {
           </div>
         </div>
 
-        <div className="flx flex-col">
-          <NavTitle title="MENU" />
-          {menuItems.map(({ name, link }) => (
-            <NavLink href={link} key={name} name={name} onClick={toggleNav} />
-          ))}
+        <div className="flex gap-20 w-full">
+          <div className="w-full">
+            <NavTitle title="MENU" />
+            {navLinks.map(({ name, link }) => (
+              <NavLink href={link} key={name} name={name} onClick={toggleNav} />
+            ))}
+          </div>
+          <div className="w-full">
+            <NavTitle title="LATEST ARTICLES" />
+            <BlogTile />
+            <BlogTile />
+            <BlogTile />
+          </div>
         </div>
       </div>
     </div>
