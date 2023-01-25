@@ -18,6 +18,7 @@ export const AppContextProvider = ({ children }: Props) => {
     { name: "ABOUT ME", link: "/about" },
     { name: "PROJECTS", link: "/about" },
     { name: "GALLERY", link: "/blog" },
+    { name: "BLOG", link: "/blog" },
   ];
 
   const toggleNav = () => dispatch({ type: types.TOGGLE_NAV });

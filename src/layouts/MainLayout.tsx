@@ -27,9 +27,9 @@ export const MainLayout = ({ children }: Props) => {
     >
       <body className="bg-gray-50 dark:bg-gray-900">
         <Navbar />
-        <div className="lg:container mx-auto text-gray-900 dark:text-gray-200 pt-20">
-          <div className="min-h-screen">{children}</div>
-          <h2>footer</h2>
+        <div className="lg:container mx-auto text-gray-900 dark:text-gray-200 pt-20 min-h-screen flex flex-col">
+          <div className="grow">{children}</div>
+          <h2 className="flex">footer</h2>
         </div>
       </body>
     </html>
