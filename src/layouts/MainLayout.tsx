@@ -25,7 +25,7 @@ export const MainLayout = ({ children }: Props) => {
       }`}
       lang="en"
     >
-      <body className="bg-white dark:bg-gray-900">
+      <body className="bg-gray-50 dark:bg-gray-900">
         <Navbar />
         <div className="lg:container mx-auto text-gray-900 dark:text-gray-200 pt-20">
           <div className="min-h-screen">{children}</div>

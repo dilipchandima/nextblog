@@ -1,7 +1,11 @@
-import Link from "next/link";
-import React, { useEffect } from "react";
-import Test from "../../../src/components/test";
-import { getAllPostIds, getPostData } from "../../../src/util";
+import React from "react";
+
+import Test from "~/components/test";
+import {
+  getAllMarkdownDocMeta,
+  getAllMarkdownFileNames,
+  readSingleMarkdownDoc,
+} from "~/util";
 
 export default async function Page({ params: { id } }: any) {
   const postData: any = await getData(id);
@@ -10,14 +14,17 @@ export default async function Page({ params: { id } }: any) {
 }
 
 export async function generateStaticParams() {
-  const paths = await getAllPostIds();
-  paths.map((x) => console.log(x));
+  const paths = await getAllMarkdownFileNames("blog");
 
-  return paths.map((x) => ({ id: x.params.id }));
+  return paths.map((x) => ({ id: x }));
 }
 
 async function getData(id: string) {
-  const postData = await getPostData(id);
+  const detailsArray = await getAllMarkdownDocMeta("blog");
+  const blog = detailsArray.filter((i) => i.slug === id);
+
+  console.log(id, detailsArray, blog);
+  const postData = await readSingleMarkdownDoc("blog", blog[0].id);
 
   return postData;
 }

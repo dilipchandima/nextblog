@@ -1,19 +1,15 @@
 ---
-title: Markdown/MDX with Next.js
-author: Lee Robinson
-description: The project has been created to provide a new level of interaction between Mad Paws' customers and pet sitters.
+title: Are you seeking for build your app on cloud.
+author: Dileepa Chandima
 date: 12/01/2023
+category: TECH
+tags: react-native, storybook, components
+slug: are-you-seeking-for-build-your-app-on-cloud
 ---
-
-Title: Are you seeking for build your app on cloud.
-Date: 2020-02-16
-Category: TECHHHff
-Tags: react native, app center
-Slug: are-you-seeking-for-build-your-app-on-cloud
 
 Are you a mobile application developer, And Are you finding for better place to build your app automatically ? Are you searching for a product for implement CI/CD process for React Native mobile apps?
 
-You are in the right place. Follow the guids for implement CI/CD Process for your mobile application development.
+You are in the right place. Follow the guide for implement CI/CD Process for your mobile application development.
 
 ### Step 1. Sign up with App Center at appcenter.ms
 
@@ -61,25 +57,3 @@ Once the build has run to completion, a successful build will generate an email 
 Now you can configure your mobile application development process with Visual Studio App Center !!!!
 
 Images - [Visual Studio App Center Documentation](https://visualstudio.microsoft.com/app-center/get-started/)
-
-```
-yarn start
-```
-
-```js
-
-document.querySelector('.container').appendChild(multi)
-    }
-var Equalizadores = document.querySelectorAll('.channel')
-       function play() {
-           Equalizadores.forEach(canal => {
-           let altura = Math.floor(Math.random() * 95 +1)
-           canal.style.height = altura+'%'
-       })
-       }
-
-           var run = setInterval(play, 100)
-
-
-
-```

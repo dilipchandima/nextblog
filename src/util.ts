@@ -5,49 +5,49 @@ import html from "remark-html";
 import fs from "fs";
 import path from "path";
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync("markdown/blog");
+export const getAllMarkdownFileNames = (folderName: string) => {
+  const fileNames = fs.readdirSync(`markdown/${folderName}`);
 
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
-}
+  return fileNames.map((fileName) => fileName.replace(/\.md$/, ""));
+};
 
-export async function getAllPostTileData() {
-  const fileNames = fs.readdirSync("markdown/blog");
-
-  const params = [];
-  for (const id of fileNames) {
-    const fullPath = path.join("markdown/blog", id);
-    const fileContents = await fs.readFileSync(fullPath, "utf8");
-    const matterResult = await matter(fileContents);
-    params.push({ ...matterResult.data, id });
-  }
-
-  return params;
-}
-
-export async function getPostData(id: string) {
-  const fullPath = path.join("markdown/blog", `${id}.md`);
+export const readSingleMarkdownDoc = async (
+  folderName: string,
+  fileName: string
+) => {
+  const fullPath = path.join(`markdown/${folderName}`, `${fileName}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
-  // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
+
   const contentHtml = processedContent.toString();
 
-  // Combine the data with the id and contentHtml
   return {
-    id,
+    id: fileName,
+    folderName,
     contentHtml,
     ...matterResult.data,
   };
-}
+};
+
+export const getAllMarkdownDocMeta = async (
+  folderName: string,
+  count = 100
+) => {
+  const fileNames = getAllMarkdownFileNames(folderName).slice(0, count);
+
+  const params = [];
+
+  for (const fileName of fileNames) {
+    const fullPath = path.join("markdown/blog", `${fileName}.md`);
+    const fileContents = await fs.readFileSync(fullPath, "utf8");
+    const matterResult = await matter(fileContents);
+    params.push({ ...matterResult.data, id: fileName });
+  }
+
+  return params;
+};

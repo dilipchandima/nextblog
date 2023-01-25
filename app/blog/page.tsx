@@ -1,11 +1,11 @@
-import Link from "next/link";
 import React from "react";
-import BlogTiles from "../../src/components/BlogTiles";
-import { getAllPostIds, getAllPostTileData } from "../../src/util";
+
+import BlogTiles from "~/components/BlogTiles";
+import { getAllMarkdownDocMeta } from "~/util";
 
 export default async function Post() {
   const paths = await getData();
-  console.log(paths);
+
   return (
     <div className="my-16">
       <BlogTiles blogs={paths} />
@@ -14,7 +14,7 @@ export default async function Post() {
 }
 
 async function getData() {
-  const paths = await getAllPostTileData();
+  const paths = await getAllMarkdownDocMeta("blog");
 
   return paths;
 }

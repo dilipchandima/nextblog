@@ -1,8 +1,9 @@
 "use client";
 
 import "./globals.css";
-import { AppContextProvider } from "../src/store/AppContextProvider";
+
 import { MainLayout } from "../src/layouts/MainLayout";
+import { AppContextProvider } from "../src/store/AppContextProvider";
 
 export default function RootLayout({
   children,
