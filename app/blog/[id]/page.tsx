@@ -14,9 +14,9 @@ export default async function Page({ params: { id } }: any) {
 }
 
 export async function generateStaticParams() {
-  const paths = await getAllMarkdownFileNames("blog");
+  const paths = await getAllMarkdownDocMeta("blog");
 
-  return paths.map((x) => ({ id: x }));
+  return paths.map((x) => ({ id: x.slug }));
 }
 
 async function getData(id: string) {

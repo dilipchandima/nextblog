@@ -37,7 +37,7 @@ export const readSingleMarkdownDoc = async (
 export const getAllMarkdownDocMeta = async (
   folderName: string,
   count = 100
-) => {
+): Promise<any[]> => {
   const fileNames = getAllMarkdownFileNames(folderName).slice(0, count);
 
   const params = [];
