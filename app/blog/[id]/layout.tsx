@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FiChevronLeft } from "react-icons/fi";
 
 import BlogTiles from "~/components/BlogTiles";
+import { BlogTile } from "~/components/NavBar/components/BlogTile";
 import { getAllMarkdownDocMeta } from "~/util";
 
 type Props = {
@@ -23,6 +24,7 @@ export default async function RootLayout({ children }: Props) {
       {children}
       <div className="bg-gray-100 dark:bg-gray-800 mt-20 mb-20 py-14 px-10 rounded-2xl">
         <h3 className="text-center text-2xl mb-10">Latest Articles</h3>
+
         <BlogTiles blogs={paths} />
       </div>
     </>

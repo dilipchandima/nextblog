@@ -1,5 +1,8 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "cSpell.words": ["extralight"],
+  "editor.wordWrapColumn": 80,
+  "html.format.wrapLineLength": 80
 }

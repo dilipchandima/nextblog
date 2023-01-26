@@ -19,7 +19,6 @@ async function getData(id: string) {
   const detailsArray = await getAllMarkdownDocMeta("blog");
   const blog = detailsArray.filter((i) => i.slug === id);
 
-  console.log(id, detailsArray, blog);
   const postData = await readSingleMarkdownDoc("blog", blog[0].id);
 
   return postData;

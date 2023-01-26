@@ -5,13 +5,6 @@ import Link from "next/link";
 import { Tag } from "~/components/Tag";
 import { useAppContext } from "~/store/useAppContext";
 
-// title: "Are you seeking for build your app on cloud.",
-//     author: "Dileepa Chandima",
-//     date: "12/01/2023",
-//     category: "TECH",
-//     tags: "react-native, storybook, components",
-//   slug: "are-you-seeking-for-build-your-app-on-cloud",
-
 export type Blog = {
   title: string;
   author: string;
@@ -32,7 +25,7 @@ export const BlogTile = ({
   const { toggleNav } = useAppContext();
 
   return (
-    <div className="py-3 my-3 lg:py-6 lg:my-6">
+    <div className="py-3 px-3 rounded-xl my-3 lg:py-6 lg:my-6 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 duration-300">
       <Link href={`/blog/${slug}`} onClick={toggleNav}>
         <span className="font-thin text-gray-600 dark:text-gray-400">
           {date}

@@ -12,7 +12,7 @@ export default function MarkDown({ postData }: any) {
 
   return (
     <div className="pt-20">
-      <article className="prose  mx-auto dark:prose-invert prose-img:rounded-lg">
+      <article className="prose  mx-auto dark:prose-invert prose-img:rounded-lg prose-p:font-thin">
         <h1 className="text-6xl">{postData.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>

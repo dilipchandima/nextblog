@@ -16,7 +16,7 @@ const BlogTiles = ({ blogs }: any) => {
         >
           <Link href={`/blog/${slug}`}>
             <div
-              className="w-full h-full  border-2 p-6 rounded-xl border-gray-300 dark:border-gray-600  hover:bg-gray-100 hover:dark:bg-gray-800 hover:dark:border-gray-600 hover:border-gray-400 transition duration-200"
+              className="w-full h-full  border-2 p-6 rounded-xl border-gray-300 dark:border-gray-600  hover:bg-gray-100 hover:dark:bg-gray-800 hover:dark:border-gray-500 hover:border-gray-400 transition duration-200"
               key={id}
             >
               <h2 className="text-xl font-semibold mb-2">{title}</h2>

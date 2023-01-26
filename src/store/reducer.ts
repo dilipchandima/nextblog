@@ -5,7 +5,7 @@ export interface Reducer {
 
 export const initialState: Reducer = {
   isNavOpen: false,
-  isDarkMode: false,
+  isDarkMode: true,
 };
 
 export const types = {

@@ -9,7 +9,7 @@ export const TopNav = () => {
   const { toggleNav } = useAppContext();
 
   return (
-    <div className=" container mx-auto flex justify-between items-center w-full h-full text-gray-900 dark:text-gray-50">
+    <div className="container px-5 md:px-0 mx-auto flex justify-between items-center w-full h-full text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-gray-900">
       <Link className="text-xl" href="/">
         Dileepa Chandima
       </Link>

@@ -16,8 +16,8 @@ export const AppContextProvider = ({ children }: Props) => {
   const navLinks = [
     { name: "HOME", link: "/" },
     { name: "ABOUT ME", link: "/about" },
-    { name: "PROJECTS", link: "/about" },
-    { name: "GALLERY", link: "/blog" },
+    { name: "PROJECTS", link: "/projects" },
+    { name: "GALLERY", link: "/gallery" },
     { name: "BLOG", link: "/blog" },
   ];
 
