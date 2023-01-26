@@ -7,6 +7,8 @@ import { Outfit } from "@next/font/google";
 import Navbar from "~/components/NavBar/NavBar";
 import { useAppContext } from "~/store/useAppContext";
 
+import { MainFooter } from "./Footer/MainFooter";
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -27,9 +29,9 @@ export const MainLayout = ({ children }: Props) => {
     >
       <body className="bg-gray-50 dark:bg-gray-900">
         <Navbar />
-        <div className="lg:container mx-auto text-gray-900 dark:text-gray-200 pt-20 min-h-screen flex flex-col">
-          <div className="grow">{children}</div>
-          <h2 className="flex">footer</h2>
+        <div className=" text-gray-900 dark:text-gray-200 pt-20 min-h-screen flex flex-col">
+          <div className="grow lg:container  mx-auto">{children}</div>
+          <MainFooter />
         </div>
       </body>
     </html>

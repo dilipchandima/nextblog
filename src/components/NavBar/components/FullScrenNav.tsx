@@ -10,36 +10,8 @@ import { NavLink } from "./NavLink";
 import { NavTitle } from "./NavTitle";
 import { ThemeToggler } from "./ThemeToggler";
 
-const blogs = [
-  {
-    title: "Are you seeking for build your app on cloud.",
-    author: "Dileepa Chandima",
-    date: "12/01/2023",
-    category: "TECH",
-    tags: "react-native, storybook, components",
-    slug: "are-you-seeking-for-build-your-app-on-cloud",
-  },
-  {
-    title:
-      "Why Complex code with Getters and Setters in JAVA ? It’s time to move with Lombok",
-    author: "Dileepa Chandima",
-    date: "12/01/2023",
-    category: "TECH",
-    tags: "java, lombok",
-    slug: "why-complex-code-with-Getters-and-Setters-in-JAVA-It-s-time-to-move-with-Lombok",
-  },
-  {
-    title: "Getting started with Storybook",
-    author: "Dileepa Chandima",
-    date: "12/01/2023",
-    category: "TECH",
-    tags: "react, react-native, storybook, components",
-    slug: "getting-started-with-storybook",
-  },
-];
-
 export const FullScreenNav = () => {
-  const { isNavOpen, toggleNav, navLinks } = useAppContext();
+  const { isNavOpen, toggleNav, navLinks, latestBlogs } = useAppContext();
 
   return (
     <div
@@ -72,7 +44,7 @@ export const FullScreenNav = () => {
           <div className="w-full">
             <NavTitle title="LATEST ARTICLES" />
             <>
-              {blogs.map((blog) => (
+              {latestBlogs.map((blog) => (
                 <BlogTile key={blog.title} {...blog} />
               ))}
             </>
