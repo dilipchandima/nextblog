@@ -1,12 +1,33 @@
 import React from "react";
 
+import { Disqus } from "~/components/Disqus";
 import MarkDown from "~/components/Markdown";
+import { Blog } from "~/components/NavBar/components/BlogTile";
 import { getAllMarkdownDocMeta, readSingleMarkdownDoc } from "~/util";
 
 export default async function Page({ params: { id } }: any) {
-  const postData: any = await getData(id);
+  const postData: {
+    id?: string;
+    folderName: string;
+    contentHtml: any;
+    title?: string;
+    author?: string;
+    date?: string;
+    category?: string;
+    tags?: string;
+    slug?: string;
+  } = await getData(id);
 
-  return <MarkDown postData={postData} />;
+  return (
+    <>
+      <MarkDown postData={postData} />
+      <Disqus
+        identifier={postData?.slug || ""}
+        title={postData?.title || ""}
+        url={`https://dilipchandima.vercel.app/blog/${postData.slug}`}
+      />
+    </>
+  );
 }
 
 export async function generateStaticParams() {
