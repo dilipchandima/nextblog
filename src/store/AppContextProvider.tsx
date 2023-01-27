@@ -17,7 +17,7 @@ export const AppContextProvider = ({ children }: Props) => {
     { name: "HOME", link: "/" },
     { name: "ABOUT ME", link: "/about" },
     { name: "PROJECTS", link: "/projects" },
-    { name: "GALLERY", link: "/gallery" },
+    // { name: "GALLERY", link: "/gallery" },
     { name: "BLOG", link: "/blog" },
   ];
 

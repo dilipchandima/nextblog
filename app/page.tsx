@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <main className="w-full flex items-center justify-center mt-20 md:mt-36">
+    <main className="w-full min-h-[70vh] flex items-center justify-center mt-20 md:mt-36">
       <div className="w-3/4">
         <h2 className="text-2xl text-right md:text-4xl text-gray-600 font-semibold">
           DILEEPA CHANDIMA

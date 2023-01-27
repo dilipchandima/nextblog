@@ -20,13 +20,6 @@ const BlogTiles = ({ blogs }: any) => {
               key={id}
             >
               <h2 className="text-xl font-semibold mb-2">{title}</h2>
-              {/* <Image
-                alt={title}
-                className="h-36 w-full object-cover"
-                height={100}
-                src={image}
-                width={500}
-              /> */}
               <Tag tags={tags} />
               <p className="text-xs text-gray-400 dark:text-gray-600">{date}</p>
             </div>

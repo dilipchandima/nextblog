@@ -43,7 +43,7 @@ export const getAllMarkdownDocMeta = async (
   const params = [];
 
   for (const fileName of fileNames) {
-    const fullPath = path.join("markdown/blog", `${fileName}.md`);
+    const fullPath = path.join(`markdown/${folderName}`, `${fileName}.md`);
     const fileContents = await fs.readFileSync(fullPath, "utf8");
     const matterResult = await matter(fileContents);
     params.push({ ...matterResult.data, id: fileName });
