@@ -15,10 +15,10 @@ export default async function RootLayout({ children }: Props) {
   return (
     <>
       <Link
-        className="flex w-40 h-10 items-center gap-2 text-gray-500"
+        className="flex w-40 h-10 items-center gap-2 text-gray-700 dark:text-gray-300"
         href="/blog"
       >
-        <FiChevronLeft /> blogs
+        <FiChevronLeft /> Back to blogs
       </Link>
 
       {children}
