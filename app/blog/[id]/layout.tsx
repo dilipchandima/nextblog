@@ -14,12 +14,14 @@ export default async function RootLayout({ children }: Props) {
 
   return (
     <>
-      <Link
-        className="flex w-40 h-10 items-center gap-2 text-gray-700 dark:text-gray-300"
-        href="/blog"
-      >
-        <FiChevronLeft /> Back to blogs
-      </Link>
+      <div className="border-b-2 p-4 border-gray-700">
+        <Link
+          className="flex w-40 h-10 items-center gap-2 text-gray-700 dark:text-gray-300"
+          href="/blog"
+        >
+          <FiChevronLeft /> Back to blogs
+        </Link>
+      </div>
 
       {children}
       <div className="bg-gray-100 dark:bg-gray-800 mt-20 mb-20 py-14 px-10 rounded-2xl">

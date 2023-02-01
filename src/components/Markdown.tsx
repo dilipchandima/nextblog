@@ -12,8 +12,8 @@ export default function MarkDown({ postData }: any) {
 
   return (
     <div className="pt-20">
-      <article className="prose  mx-5 lg:mx-auto dark:prose-invert prose-img:rounded-lg prose-p:font-light tracking-wider">
-        <h1 className="text-6xl">{postData.title}</h1>
+      <article className="prose mx-auto dark:prose-invert prose-img:rounded-lg prose-p:font-light tracking-wide ">
+        <h1 className="text-7xl font-semibold">{postData.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </div>
