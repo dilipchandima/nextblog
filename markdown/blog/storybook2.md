@@ -1,7 +1,7 @@
 ---
 title: Manual Configuration Storybook with React
 author: Dileepa Chandima
-date: 12/01/2023
+date: 01/12/2018
 category: TECH
 tags: react, react-native, storybook, components
 slug: manual-configuration-storybook-with-react

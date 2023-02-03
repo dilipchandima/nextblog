@@ -6,7 +6,7 @@ export default async function Page() {
 
   return (
     <main>
-      <MarkDown postData={postData} />
+      <MarkDown postData={postData} isNotBlog />
     </main>
   );
 }

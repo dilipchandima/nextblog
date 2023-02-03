@@ -1,7 +1,7 @@
 ---
 title: Why micro-services from scratch, JHipster is the solution for generate, develop and deploy
 author: Dileepa Chandima
-date: 12/01/2023
+date: 10/01/2018
 category: TECH
 tags: java, jhipster, micro-services
 slug: why-micro-services-from-scratch-jhipster-is-the-solution-for-generate-develop-and-deploy

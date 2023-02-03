@@ -1,7 +1,7 @@
 ---
 title: Why Complex code with Getters and Setters in JAVA ? It’s time to move with Lombok
 author: Dileepa Chandima
-date: 12/01/2023
+date: 09/01/2019
 category: TECH
 tags: java, lombok
 slug: why-complex-code-with-Getters-and-Setters-in-JAVA-It-s-time-to-move-with-Lombok

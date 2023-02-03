@@ -1,4 +1,5 @@
 import matter from "gray-matter";
+import moment from "moment";
 import { remark } from "remark";
 import html from "remark-html";
 
@@ -31,6 +32,7 @@ export const readSingleMarkdownDoc = async (
     folderName,
     contentHtml,
     ...matterResult.data,
+    date: moment(matterResult.data.date, "DD/MM/YYYY").format("MMM DD yyyy"),
   };
 };
 
@@ -46,7 +48,11 @@ export const getAllMarkdownDocMeta = async (
     const fullPath = path.join(`markdown/${folderName}`, `${fileName}.md`);
     const fileContents = await fs.readFileSync(fullPath, "utf8");
     const matterResult = await matter(fileContents);
-    params.push({ ...matterResult.data, id: fileName });
+    params.push({
+      ...matterResult.data,
+      date: moment(matterResult.data.date, "DD/MM/YYYY").format("MMM DD yyyy"),
+      id: fileName,
+    });
   }
 
   return params;
