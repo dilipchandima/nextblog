@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BsDribbble, BsGithub, BsLinkedin } from "react-icons/bs";
 import { FiList, FiUser } from "react-icons/fi";
 
 export default function Page() {
@@ -20,6 +21,26 @@ export default function Page() {
           <br />
           DEVELOPMENT
         </h2>
+        <div className="flex gap-4 mt-10">
+          <Link
+            href="https://www.linkedin.com/in/dilipchandima/"
+            target={"_blank"}
+          >
+            <div className="text-3xl text-gray-600 dark:text-gray-400 hover:text-gray-800 hover:dark:text-gray-300">
+              <BsLinkedin />
+            </div>
+          </Link>
+          <Link href="https://github.com/dilipchandima" target={"_blank"}>
+            <div className="text-3xl text-gray-600 dark:text-gray-400 hover:text-gray-800 hover:dark:text-gray-300">
+              <BsGithub />
+            </div>
+          </Link>
+          <Link href="https://dribbble.com/dilipchandima" target={"_blank"}>
+            <div className="text-3xl text-gray-600 dark:text-gray-400 hover:text-gray-800 hover:dark:text-gray-300">
+              <BsDribbble />
+            </div>
+          </Link>
+        </div>
         <div className="mt-14 md:mt-24 flex gap-3">
           <Link
             className="bg-emerald-600 px-7 py-4 rounded-3xl text-gray-900 font-medium hover:dark:bg-amber-200 duration-300 flex gap-3 items-center text-gray-50"
