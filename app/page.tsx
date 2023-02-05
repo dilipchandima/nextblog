@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BsDribbble, BsGithub, BsLinkedin } from "react-icons/bs";
 import { FiList, FiUser } from "react-icons/fi";
@@ -5,6 +6,12 @@ import { FiList, FiUser } from "react-icons/fi";
 export default function Page() {
   return (
     <main className="w-full min-h-[70vh] flex items-center justify-center mt-20 md:mt-36">
+      <Image
+        alt="hero back"
+        className="z-[-1] opacity-5 object-cover"
+        src={"/images/back.jpeg"}
+        fill
+      />
       <div className="w-3/4">
         <h2 className="text-2xl text-right md:text-4xl text-gray-600 dark:text-gray-400 font-semibold">
           DILEEPA CHANDIMA
