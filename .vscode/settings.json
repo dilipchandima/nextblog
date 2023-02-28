@@ -1,5 +1,5 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["disqus", "extralight", "Figtree", "tailwindcss"]
+  "cSpell.words": ["disqus", "Dribbble", "extralight", "Figtree", "tailwindcss"]
 }

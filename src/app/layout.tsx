@@ -1,9 +1,8 @@
 import "./globals.css";
 
 import { Figtree } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
-import { BsDribbble, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+
+import MainLayout from "@/components/ui/Layout/MainLayout";
 
 export const metadata = {
   title: "Dileepa Chandima Personal portfolio",
@@ -16,13 +15,6 @@ const figtree = Figtree({
   variable: "--font-figtree",
 });
 
-const navLinks = [
-  { name: "HOME", link: "/" },
-  { name: "ABOUT ME", link: "/about" },
-  { name: "PROJECTS", link: "/projects" },
-  { name: "BLOG", link: "/blog" },
-];
-
 export default function RootLayout({
   children,
 }: {
@@ -33,57 +25,7 @@ export default function RootLayout({
       <body
         className={`${figtree.variable} font-sans font-light bg-gray-900 text-gray-100 mainGrid`}
       >
-        <div className="bg-gray-800 relative h-screen">
-          <div className="bg-gray-800 fixed px-2 h-screen w-[120px] text-center flex flex-col item-center justify-center">
-            <Image
-              alt="logo"
-              className="mb-10 mx-auto"
-              height={100}
-              src="/logo.png"
-              width={100}
-            />
-            <div>
-              {navLinks.map((link) => (
-                <Link href={link.link} key={link.name}>
-                  <div className="my-2 py-3 hover:bg-purple-900 duration-300 rounded-xl">
-                    {link.name}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="container mx-auto px-10">{children}</div>
-        <div className="bg-gray-800  h-screen">
-          <div className="fixed bottom-0 bg-gray-800 w-[80px] h-screen  text-center flex flex-col item-center justify-end pb-20">
-            <Link
-              href="https://www.linkedin.com/in/dilipchandima/"
-              target={"_blank"}
-            >
-              <div className="text-2xl text-gray-400 hover:text-purple-600 py-5 flex items-center justify-center">
-                <BsLinkedin />
-              </div>
-            </Link>
-            <Link href="https://github.com/dilipchandima" target={"_blank"}>
-              <div className="text-2xl text-gray-400 hover:text-purple-600 py-5 flex items-center justify-center">
-                <BsGithub />
-              </div>
-            </Link>
-            <Link href="https://dribbble.com/dilipchandima" target={"_blank"}>
-              <div className="text-2xl text-gray-400 hover:text-purple-600 py-5 flex items-center justify-center">
-                <BsDribbble />
-              </div>
-            </Link>
-            <Link
-              href="https://www.instagram.com/dilipchandima/"
-              target={"_blank"}
-            >
-              <div className="text-2xl text-gray-400 hover:text-purple-600 py-5 flex items-center justify-center">
-                <BsInstagram />
-              </div>
-            </Link>
-          </div>
-        </div>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );
