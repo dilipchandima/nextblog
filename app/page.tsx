@@ -13,22 +13,24 @@ export default function Page() {
         fill
       /> */}
       <div className="w-3/4">
-        <h2 className="text-2xl text-right md:text-4xl text-gray-600 dark:text-gray-400 font-semibold">
+        {/* <h2 className="text-2xl text-right md:text-4xl text-gray-600 dark:text-gray-400 font-semibold">
           DILEEPA CHANDIMA
         </h2>
         <h2 className="text-xl text-right md:text-2xl text-gray-600 dark:text-gray-400 mb-10 font-thin">
           FullStack Developer
-        </h2>
-        <h1 className="text-7xl md:text-9xl font-semibold">
-          Let’s turn your <span className="text-rose-600">idea</span> into{" "}
-          <span className="text-blue-600">reality</span>
+        </h2> */}
+        <div className="text-purple-500 text-xl">Hi! My Name is</div>
+        <h1 className="text-7xl md:text-9xl font-semibold purple-shadow text-gray-200">
+          Dileepa
+          <br />
+          Chandima
         </h1>
-        <h2 className="text-3xl md:text-5xl text-gray-600 dark:text-gray-400 mt-10 font-thin">
+        {/* <h2 className="text-3xl md:text-5xl text-gray-600 dark:text-gray-400 mt-10 font-thin">
           DESIGN &
           <br />
           DEVELOPMENT
-        </h2>
-        <div className="flex gap-4 mt-10">
+        </h2> */}
+        {/* <div className="flex gap-4 mt-10">
           <Link
             href="https://www.linkedin.com/in/dilipchandima/"
             target={"_blank"}
@@ -47,8 +49,8 @@ export default function Page() {
               <BsDribbble />
             </div>
           </Link>
-        </div>
-        <div className="mt-14 md:mt-24 flex gap-3">
+        </div> */}
+        {/* <div className="mt-14 md:mt-24 flex gap-3">
           <Link
             className="bg-emerald-600 px-7 py-4 rounded-3xl text-gray-900 font-medium hover:dark:bg-amber-200 duration-300 flex gap-3 items-center text-gray-50"
             href="/about"
@@ -64,7 +66,7 @@ export default function Page() {
             <FiList />
             VIEW MY PROJECTS
           </Link>
-        </div>
+        </div> */}
       </div>
     </main>
   );

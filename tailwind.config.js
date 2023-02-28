@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-outfit)", ...fontFamily.sans],
+        sans: ["var(--font-figtree)", ...fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {

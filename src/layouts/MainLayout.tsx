@@ -2,16 +2,16 @@
 
 import React, { ReactElement } from "react";
 
-import { Outfit } from "@next/font/google";
+import { Figtree } from "@next/font/google";
 
 import Navbar from "~/components/NavBar/NavBar";
 import { useAppContext } from "~/store/useAppContext";
 
 import { MainFooter } from "./Footer/MainFooter";
 
-const outfit = Outfit({
+const figtree = Figtree({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-figtree",
 });
 
 type Props = {
@@ -22,7 +22,7 @@ export const MainLayout = ({ children }: Props) => {
 
   return (
     <html
-      className={`${outfit.variable} font-sans ${
+      className={`${figtree.variable} font-sans ${
         isDarkMode ? "dark" : "light"
       }`}
       lang="en"
@@ -30,7 +30,7 @@ export const MainLayout = ({ children }: Props) => {
       <body className="bg-gray-50 dark:bg-gray-800 ">
         <div className="container mx-auto mainGrid">
           <div className="bg-gray-800 h-screen">
-            {/* <Navbar /> */}
+            <Navbar />
             <div className="fixed w-[120px]">sample</div>
           </div>
           <div className="bg-gray-900">
