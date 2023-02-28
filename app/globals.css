@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
 .overflow-y-scroll::-webkit-scrollbar {
   display: none;
 }
 
-/* For IE, Edge and Firefox */
 .overflow-y-scroll {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -17,32 +15,11 @@
   background: transparent !important;
 }
 
-/*
-.prose code {
-  color: #e2e8f0;
-}
-.prose h1 {
-  color: #e2e8f0;
-}
-.prose h2 {
-  color: #e2e8f0;
-}
-.prose h3 {
-  color: #e2e8f0;
-}
-.prose h4 {
-  color: #e2e8f0;
-}
-.prose h5 {
-  color: #e2e8f0;
-}
-.prose a {
-  color: #26abb5;
-  font-style: italic;
-  font-weight: 400;
+.mainGrid {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
 }
 
-.prose strong {
-  color: #26abb5;
+.purple-shadow {
+  text-shadow: 5px 5px #9e4bf6;
 }
-*/
