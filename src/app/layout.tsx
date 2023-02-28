@@ -52,7 +52,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
-        <div className="container mx-auto">{children}</div>
+        <div className="container mx-auto px-10">{children}</div>
         <div className="bg-gray-800  h-screen">
           <div className="fixed bottom-0 bg-gray-800 w-[80px] h-screen  text-center flex flex-col item-center justify-end pb-20">
             <Link
