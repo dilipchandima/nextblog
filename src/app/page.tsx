@@ -49,11 +49,11 @@ export default async function Home() {
               key={`project_${index}`}
             >
               <div className="absolute bg-gray-900 h-[500px] w-[500px] bg-opacity-10 flex flex-col items-center justify-center p-20 text-center ">
-                <div className="text-3xl bg-slate-200 rounded-xl p-5 text-purple-600 shadow-lg border-2 border-purple-400">
+                <div className="text-3xl bg-gray-200 rounded-xl p-5 text-purple-600 shadow-lg border-2 border-purple-400">
                   {title}
                 </div>
                 <Link
-                  className="bg-purple-800 py-1 px-2 text-white rounded mt-2 hover:bg-purple-500"
+                  className="bg-purple-850 py-1 px-2 text-white rounded mt-2 hover:bg-purple-500"
                   href="/projects"
                 >
                   MORE

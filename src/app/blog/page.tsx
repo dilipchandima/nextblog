@@ -10,7 +10,7 @@ export default async function Post() {
 
   return (
     <div className="my-16">
-      <div className="absolute bottom-0 -z-10 text-[400px] text-gray-800 font-bold opacity-50">
+      <div className="absolute bottom-0 -z-10 text-[400px] text-gray-850 font-bold opacity-50">
         Blog
       </div>
       <BlogTiles blogs={paths} />

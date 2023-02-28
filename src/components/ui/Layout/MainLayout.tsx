@@ -39,7 +39,7 @@ export default function MainLayout({ children }: Props) {
     <>
       {/* left nav for bigger screens */}
       <div className="relative h-screen hidden md:flex">
-        <div className="bg-gray-800 fixed px-2 h-screen w-[120px] text-center flex flex-col item-center justify-center">
+        <div className="bg-gray-850 border-r-[1px] border-gray-800 fixed px-2 h-screen w-[120px] text-center flex flex-col item-center justify-center">
           <Image
             alt="logo"
             className="mb-10 mx-auto"
@@ -60,7 +60,7 @@ export default function MainLayout({ children }: Props) {
       </div>
 
       {/* top nav for small screens */}
-      <div className="bg-gray-800 md:hidden p-4 flex items-center justify-between h-20 z-10">
+      <div className="bg-gray-850 md:hidden p-4 flex items-center justify-between h-20 z-10">
         <Link href={"/"}>
           <Image alt="logo" height={50} src="/logo.png" width={50} />
         </Link>
@@ -84,7 +84,7 @@ export default function MainLayout({ children }: Props) {
       </div>
 
       <div
-        className={`bg-gray-800 md:hidden p-4 w-full flex items-center justify-between fixed  ease-in duration-300 z-0 ${
+        className={`bg-gray-850 md:hidden p-4 w-full flex items-center justify-between fixed  ease-in duration-300 z-0 ${
           isOpenNav ? "top-20" : "top-[-50%]"
         }`}
       >
@@ -109,7 +109,7 @@ export default function MainLayout({ children }: Props) {
 
       {/* right nav for bigger screens */}
       <div className="h-screen  hidden md:flex">
-        <div className="fixed bg-gray-800 w-[80px] h-screen  text-center flex flex-col item-center justify-end pb-20">
+        <div className="fixed bg-gray-850 w-[80px]  border-l-[1px] border-gray-800  h-screen  text-center flex flex-col item-center justify-end pb-20">
           {apps.map((app, index) => (
             <AppLink key={index} {...app} />
           ))}
@@ -117,7 +117,7 @@ export default function MainLayout({ children }: Props) {
       </div>
 
       {/* bottom nav for small screens */}
-      <div className="bg-gray-800 h-20 md:hidden flex gap-5 justify-end px-10 items-center">
+      <div className="bg-gray-850 h-20 md:hidden flex gap-5 justify-end px-10 items-center">
         {apps.map((app, index) => (
           <AppLink key={index} {...app} />
         ))}
