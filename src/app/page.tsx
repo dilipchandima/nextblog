@@ -53,7 +53,7 @@ export default async function Home() {
                   {title}
                 </div>
                 <Link
-                  className="bg-purple-850 py-1 px-2 text-white rounded mt-2 hover:bg-purple-500"
+                  className="bg-purple-800 py-1 px-2 text-white rounded mt-2 hover:bg-purple-500"
                   href="/projects"
                 >
                   MORE
