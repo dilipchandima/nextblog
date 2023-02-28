@@ -11,13 +11,6 @@ const navLinks = [
 export default function Home() {
   return (
     <main className="h-screen flex flex-col justify-center container mx-auto">
-      <Image
-        alt="logo"
-        className="mb-10"
-        height={100}
-        src="/logo.png"
-        width={100}
-      />
       <p className="text-xl text-purple-500">Hi! My name is</p>
       <h1 className="text-9xl font-bold purple-shadow">
         Dileepa

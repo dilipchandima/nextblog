@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.mainGrid {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
+}
+
 .purple-shadow {
   text-shadow: 5px 5px #9e4bf6;
 }
