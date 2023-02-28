@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.purple-shadow {
+  text-shadow: 5px 5px #9e4bf6;
+}
