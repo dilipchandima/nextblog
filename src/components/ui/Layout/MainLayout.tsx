@@ -37,14 +37,15 @@ export default function MainLayout({ children }: Props) {
 
   return (
     <>
-      <div className="bg-gray-800 relative h-screen hidden md:flex">
+      {/* left nav for bigger screens */}
+      <div className="relative h-screen hidden md:flex">
         <div className="bg-gray-800 fixed px-2 h-screen w-[120px] text-center flex flex-col item-center justify-center">
           <Image
             alt="logo"
             className="mb-10 mx-auto"
-            height={100}
+            height={80}
             src="/logo.png"
-            width={100}
+            width={80}
           />
           <div>
             {navLinks.map((link) => (
@@ -58,6 +59,7 @@ export default function MainLayout({ children }: Props) {
         </div>
       </div>
 
+      {/* top nav for small screens */}
       <div className="bg-gray-800 md:hidden p-4 flex items-center justify-between h-20 z-10">
         <Link href={"/"}>
           <Image alt="logo" height={50} src="/logo.png" width={50} />
@@ -105,13 +107,16 @@ export default function MainLayout({ children }: Props) {
 
       <div className="container mx-auto px-2 md:px-10">{children}</div>
 
-      <div className="bg-gray-800  h-screen  hidden md:flex">
+      {/* right nav for bigger screens */}
+      <div className="h-screen  hidden md:flex">
         <div className="fixed bg-gray-800 w-[80px] h-screen  text-center flex flex-col item-center justify-end pb-20">
           {apps.map((app, index) => (
             <AppLink key={index} {...app} />
           ))}
         </div>
       </div>
+
+      {/* bottom nav for small screens */}
       <div className="bg-gray-800 h-20 md:hidden flex gap-5 justify-end px-10 items-center">
         {apps.map((app, index) => (
           <AppLink key={index} {...app} />

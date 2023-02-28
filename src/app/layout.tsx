@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${figtree.variable} font-sans font-light bg-gray-900 text-gray-100 mainGrid`}
+        className={`${figtree.variable} font-sans font-light bg-gray-900 text-gray-100 mainGrid dark`}
       >
         <MainLayout>{children}</MainLayout>
       </body>
