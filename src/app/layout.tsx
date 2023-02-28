@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${figtree.variable} font-sans font-light bg-gray-900 text-gray-100`}
       >
-        {children}
+        <div className="container mx-auto">{children}</div>
       </body>
     </html>
   );
