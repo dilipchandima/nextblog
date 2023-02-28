@@ -20,15 +20,6 @@ export default function Home() {
       <p className="text-4xl text-purple-500 font-extralight mt-5">
         I build things for web and mobile
       </p>
-      <div className="flex">
-        {navLinks.map((link) => (
-          <Link href={`${link.link}`} key={link.name}>
-            <div className="pr-5 mr-5 py-5 my-5 hover:text-purple-500">
-              {link.name}
-            </div>
-          </Link>
-        ))}
-      </div>
     </main>
   );
 }
