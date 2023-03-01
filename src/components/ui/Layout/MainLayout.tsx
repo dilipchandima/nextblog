@@ -39,18 +39,18 @@ export default function MainLayout({ children }: Props) {
     <>
       {/* left nav for bigger screens */}
       <div className="relative h-screen hidden md:flex">
-        <div className="bg-gray-850 border-r-[1px] border-gray-800 fixed px-2 h-screen w-[120px] text-center flex flex-col item-center justify-center">
+        <div className="bg-gray-850 border-r-[1px] border-gray-800 fixed px-2 h-screen w-[120px] flex flex-col">
           <Image
             alt="logo"
-            className="mb-10 mx-auto"
+            className="mb-10 mx-auto mt-5"
             height={80}
             src="/logo.png"
             width={80}
           />
-          <div>
+          <div className="text-center flex flex-col flex-grow item-center justify-center">
             {navLinks.map((link) => (
               <Link href={link.link} key={link.name}>
-                <div className="my-2 py-3 hover:bg-purple-900 duration-300 rounded-xl">
+                <div className="my-2 py-3 hover:bg-gray-800 hover:text-purple-300 duration-300 rounded-xl">
                   {link.name}
                 </div>
               </Link>
