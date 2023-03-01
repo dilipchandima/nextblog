@@ -50,7 +50,7 @@ export default function MainLayout({ children }: Props) {
           <div className="text-center flex flex-col flex-grow item-center justify-center">
             {navLinks.map((link) => (
               <Link href={link.link} key={link.name}>
-                <div className="my-2 py-3 hover:bg-gray-800 hover:text-purple-300 duration-300 rounded-xl">
+                <div className="my-2 py-3 bg-gray-800 hover:bg-gray-900 hover:text-purple-500 duration-300 rounded-xl">
                   {link.name}
                 </div>
               </Link>

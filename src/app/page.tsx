@@ -12,7 +12,10 @@ export default async function Home() {
 
   return (
     <main>
-      <section className="h-[60vh] md:h-[80vh] flex flex-col justify-center">
+      <div className="hidden md:flex animate-bounce absolute bottom-3 right-[100px]">
+        SCROLL DOWN
+      </div>
+      <section className="h-[60vh] md:h-[100vh] flex flex-col justify-center">
         <Particle />
         <p className="text-xl text-purple-500">Hi! My name is</p>
         <h1 className="text-6xl md:text-7xl lg:text-9xl font-bold purple-shadow">
@@ -34,10 +37,10 @@ export default async function Home() {
           </p>
           <p className="bg-gray-900 rounded-3xl py-5">
             Now I love to use JavaScript in Web, Mobile and Backend development.
-            I`&apos;m a self-motivated software engineer with a Computer Science
-            and Engineering background having 6+ years of experience in Mobile
-            Application and Web Application development. A dynamic personality,
-            and motivated team player with sound leadership skills.
+            And also I&apos;m a self-motivated guy having more than half decade
+            of experience in Mobile Application and Web Application development.
+            Also a dynamic personality, and motivated team player with sound
+            leadership skills.
           </p>
         </div>
       </Section>

@@ -5,7 +5,7 @@ import { Figtree } from "next/font/google";
 import MainLayout from "@/components/ui/Layout/MainLayout";
 
 export const metadata = {
-  title: "Dileepa Chandima Personal portfolio",
+  title: "Dileepa Chandima | Mobile and Web developer",
   description: "Dileepa Chandima Personal portfolio",
 };
 
