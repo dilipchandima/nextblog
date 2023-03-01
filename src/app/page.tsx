@@ -2,6 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  DiAndroid,
+  DiApple,
+  DiCss3,
+  DiFirebase,
+  DiHtml5,
+  DiJsBadge,
+  DiMongodb,
+  DiMysql,
+  DiNodejs,
+  DiNpm,
+  DiReact,
+  DiSass,
+} from "react-icons/di";
 
 import { getAllMarkdownDocMeta } from "@/components/library/utils";
 import Particle from "@/components/ui/Particle";
@@ -27,6 +41,7 @@ export default async function Home() {
           I build things for web and mobile
         </p>
       </section>
+
       <Section title="Nice to meet you">
         <Image alt="profile" height={200} src="/images/face.png" width={200} />
         <div className="w-full md:w-3/5 text-xl mt-10">
@@ -44,6 +59,24 @@ export default async function Home() {
           </p>
         </div>
       </Section>
+
+      <Section title="Technologies I love">
+        <div className="w-full md:w-3/5 mt-10 flex gap-10 flex-wrap text-7xl text-purple-200">
+          <DiJsBadge />
+          <DiHtml5 />
+          <DiCss3 />
+          <DiAndroid />
+          <DiApple />
+          <DiFirebase />
+          <DiMongodb />
+          <DiMysql />
+          <DiNodejs />
+          <DiNpm />
+          <DiReact />
+          <DiSass />
+        </div>
+      </Section>
+
       <Section title="My resent work">
         <div className="flex flex-col md:flex-row gap-3">
           {projects.slice(0, 2).map(({ title, image }, index) => (
