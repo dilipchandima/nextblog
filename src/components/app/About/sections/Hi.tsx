@@ -27,7 +27,7 @@ export const Hi = () => {
           school.
         </p>
         <p className="font-mono text-lg font-thin mb-10">
-          In 2019, I graduated from the{" "}
+          In 2016, I graduated from the{" "}
           <span className="font-semibold">
             Faculty of Engineering at the University of Peradeniya, Sri Lanka,
             with a BSc in Engineering
