@@ -53,7 +53,7 @@ export const AppLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
 
         {/* nav bar for small screens */}
-        <div className="bg-white md:hidden p-4 flex items-center justify-between h-20 z-10 font-mono">
+        <div className="bg-white md:hidden p-4 flex items-center justify-between h-20 z-20 font-mono fixed w-screen  border-b-2">
           <Link href="/" className="font-bold text-lg">
             dilipchandima
           </Link>
@@ -101,7 +101,12 @@ export const AppLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
 
-        <>{children}</>
+        <div
+          className="bg-repeat"
+          style={{ "background-image": "url(/back.png)" }}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );
