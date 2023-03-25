@@ -10,7 +10,7 @@ export const Hero = () => {
           <br />
           Chandima
         </h1>
-        <p className="font-mono text-xl mt-5 w-fullmd:max-w-3xl px-4 md:px-0  mx-auto">
+        <p className="font-mono text-xl mt-5 w-full md:max-w-3xl px-4 md:px-0  mx-auto">
           Software developer based in Sri Lanka, passionate about Mobile and Web
           development & love to design things
         </p>

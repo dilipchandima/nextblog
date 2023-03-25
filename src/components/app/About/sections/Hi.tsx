@@ -1,7 +1,7 @@
 export const Hi = () => {
   return (
     <section>
-      <div className="container w-fullmd:max-w-3xl px-4 md:px-0  mx-auto py-40">
+      <div className="container w-full md:max-w-3xl px-4 md:px-0  mx-auto py-40">
         <h1>Hello!</h1>
         <p className="font-mono text-lg font-thin mb-10">
           My name is Dileepa Chandima, I enjoy creating mobile and web

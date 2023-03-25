@@ -7,7 +7,7 @@ export const Projects = () => {
       id="section-0"
     >
       <div className="container mx-auto text-center">
-        <p className="text-2xl w-fullmd:max-w-3xl px-4 md:px-0  mx-auto text-gray-900 font-light mb-16">
+        <p className="text-2xl w-full md:max-w-3xl px-4 md:px-0  mx-auto text-gray-900 font-light mb-16">
           I’m working on a online planning poker tool for Agile teams to measure
           their task with remote team members.
         </p>
