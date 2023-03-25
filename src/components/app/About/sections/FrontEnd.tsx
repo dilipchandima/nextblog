@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const FrontEnd = () => {
   return (
@@ -12,13 +15,15 @@ export const FrontEnd = () => {
           From childhood I love painting and designing things. So I love to see
           my designs and UI implementation online.
         </p>
-        <Link
-          href={"https://dribbble.com/dilipchandima"}
-          target="_blank"
-          className="btn-light text-gray-900"
-        >
-          See my dribbble
-        </Link>
+        <AnimationOnScroll animateIn="animate__bounceIn" delay={100}>
+          <Link
+            href={"https://dribbble.com/dilipchandima"}
+            target="_blank"
+            className="btn-light text-gray-900"
+          >
+            See my dribbble
+          </Link>
+        </AnimationOnScroll>
       </div>
     </section>
   );

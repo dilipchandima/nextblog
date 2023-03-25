@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const About = () => {
   return (
@@ -11,9 +14,11 @@ export const About = () => {
           Currently working at Mad Paws, Australia as a Remote FullStack
           developer from Sri Lanka.
         </p>
-        <Link className="btn-light" href={"/about"}>
-          More about me
-        </Link>
+        <AnimationOnScroll animateIn="animate__bounceIn" delay={100}>
+          <Link className="btn-light" href={"/about"}>
+            More about me
+          </Link>
+        </AnimationOnScroll>
       </div>
     </section>
   );

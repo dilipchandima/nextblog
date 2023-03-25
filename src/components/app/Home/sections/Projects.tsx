@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const Projects = () => {
   return (
@@ -11,9 +14,11 @@ export const Projects = () => {
           I’m working on a online planning poker tool for Agile teams to measure
           their task with remote team members.
         </p>
-        <Link className="btn-dark" href={"/projects"}>
-          My projects
-        </Link>
+        <AnimationOnScroll animateIn="animate__bounceIn" delay={100}>
+          <Link className="btn-dark" href={"/projects"}>
+            My projects
+          </Link>
+        </AnimationOnScroll>
       </div>
     </section>
   );
