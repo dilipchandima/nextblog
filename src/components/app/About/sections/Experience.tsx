@@ -51,7 +51,7 @@ const experience = [
 export const Experience = () => {
   return (
     <section>
-      <div className="container w-full md:max-w-3xl  mx-auto py-40">
+      <div className="container w-fullmd:max-w-3xl px-4 md:px-0  mx-auto py-40">
         <h3>Experience</h3>
         {experience.map(({ name, designation, work, dates }) => (
           <div key={name}>

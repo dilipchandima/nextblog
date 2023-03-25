@@ -14,7 +14,7 @@ const experience = [
 export const Awards = () => {
   return (
     <section className="bg-gray-100">
-      <div className="container w-full md:max-w-3xl  mx-auto py-40">
+      <div className="container w-fullmd:max-w-3xl px-4 md:px-0  mx-auto py-40">
         <h3>Honers & Awards</h3>
         {experience.map(({ name, designation, dates }) => (
           <div key={name}>

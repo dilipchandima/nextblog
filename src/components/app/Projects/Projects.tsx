@@ -52,7 +52,7 @@ const projects = [
 export const Projects = () => {
   return (
     <main>
-      <div className="container mx-auto md:max-w-5xl pt-40">
+      <div className="container mx-auto md:max-w-5xl px-4 md:px-0 pt-40">
         <h1>Projects</h1>
         {projects.map(({ title, date, tags, link, image, description }) => (
           <div key={title}>
@@ -63,7 +63,7 @@ export const Projects = () => {
                   alt="dileepa"
                   width={400}
                   height={400}
-                  className="mx-auto rounded-2xl"
+                  className="mx-auto rounded-2xl -z-20"
                 />
               </div>
               <div className="w-full md:w-2/4">

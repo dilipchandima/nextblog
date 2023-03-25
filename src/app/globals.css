@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-3xl md:text-9xl font-bold mb-10;
+    @apply text-7xl md:text-9xl font-bold mb-10;
   }
   h2 {
     @apply text-6xl font-bold mb-10;
@@ -31,6 +31,6 @@
     @apply bg-gray-900 py-2 px-6 rounded-xl hover:bg-gray-800 text-gray-50 hover:text-gray-200 font-mono;
   }
   .nav-item {
-    @apply flex items-center rounded-xl hover:text-gray-700 font-mono;
+    @apply flex items-center font-mono duration-200 border-b-2 border-gray-50 hover:border-gray-700;
   }
 }

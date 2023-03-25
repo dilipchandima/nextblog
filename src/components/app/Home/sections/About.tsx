@@ -7,7 +7,7 @@ export const About = () => {
       id="section-0"
     >
       <div className="container mx-auto text-center">
-        <p className="text-2xl w-full md:max-w-3xl mx-auto text-white font-light mb-16">
+        <p className="text-2xl w-fullmd:max-w-3xl px-4 md:px-0 mx-auto text-white font-light mb-16">
           Currently working at Mad Paws, Australia as a Remote FullStack
           developer from Sri Lanka.
         </p>
