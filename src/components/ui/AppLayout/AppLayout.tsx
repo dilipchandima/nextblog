@@ -102,8 +102,8 @@ export const AppLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
 
         <div
-          className="bg-repeat"
-          style={{ "background-image": "url(/back.png)" }}
+        // className="bg-repeat"
+        // style={{ "background-image": "url(/back.png)" }}
         >
           {children}
         </div>
