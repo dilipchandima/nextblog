@@ -22,7 +22,7 @@ export const FrontEnd = () => {
           trigger: document.querySelector(".section-0"),
           start: "top top",
           end: "bottom bottom",
-          scrub: true,
+          scrub: 2,
         },
       }
     );
