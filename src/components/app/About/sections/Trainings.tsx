@@ -16,7 +16,7 @@ export const Trainings = () => {
   return (
     <section>
       <div className="container w-full md:max-w-3xl px-4 md:px-0  mx-auto py-40">
-        <h3>Honers & Awards</h3>
+        <h3>Trainings</h3>
         {experience.map(({ name, designation, dates }) => (
           <div key={name}>
             <h4>{name}</h4>
