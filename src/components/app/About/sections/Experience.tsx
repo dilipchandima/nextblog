@@ -4,7 +4,7 @@ const experience = [
     designation: "Full-stack Software Engineer (Remote)",
     dates: "May 2022 - NOW",
     work: [
-      "Working as a Frontend developer Next.JS and development owner of common profile view, resulting in reduce development time in the future initiatives for Sitter and Owner Profiles",
+      "Working as a Frontend developer Next.JS and development of common profile view, resulting in reduce development time in the future initiatives for Sitter and Owner Profiles",
       "Contributing to the design system by implementing reusable components and standardizing design patterns, resulting in increased consistency across the product",
       "Maintained and improved the legacy booking request form to enhance the user experience by adding new features",
     ],
