@@ -36,7 +36,7 @@ export const AppLayout = ({ children }: { children: React.ReactNode }) => {
         className={`${figtree.variable} ${redHatMono.variable} font-sans  scrollbar-hide`}
       >
         {/* this is nav bar for bigger screens */}
-        <div className="hidden md:flex fixed font-mono text-black justify-between h-20 w-full z-50 items-center px-20 gap-10 backdrop-blur-xl border-b-2">
+        <div className="hidden md:flex fixed font-mono text-black justify-between h-20 w-full z-50 items-center px-20 gap-10 backdrop-blur-xl border-b-2 bg-white bg-opacity-60">
           <Link href="/" className="font-bold text-lg">
             dilipchandima
           </Link>
