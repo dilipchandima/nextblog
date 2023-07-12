@@ -45,35 +45,49 @@ export const FrontEnd = () => {
             alt="dileepa"
             width={600}
             height={500}
-            className="mx-auto mt-24 me object-contain"
+            className="mx-auto mt-24 me object-cover"
           />
           <Image
             src="https://cdn.dribbble.com/users/2800664/screenshots/18429522/media/8f403914f7818ae1eba8c1d02499b67c.png"
             alt="dileepa"
             width={600}
             height={500}
-            className="mx-auto mt-24 me object-contain"
+            className="mx-auto mt-24 me object-cover"
           />
           <Image
             src="https://cdn.dribbble.com/users/2800664/screenshots/15780723/media/c42ae38f93778541ecaaf0a468b7db2b.png"
             alt="dileepa"
             width={600}
             height={500}
-            className="mx-auto mt-24 me object-contain"
+            className="mx-auto mt-24 me object-cover"
           />
           <Image
             src="https://cdn.dribbble.com/users/2800664/screenshots/18429534/media/d6b44ce884c15e957a1e506b25517273.png"
             alt="dileepa"
             width={600}
             height={500}
-            className="mx-auto mt-24 me object-contain"
+            className="mx-auto mt-24 me object-cover"
           />
           <Image
             src="https://cdn.dribbble.com/userupload/8178037/file/original-043fadb596cb55d789c7288c7dc482bc.png?compress=1&resize=1728x1117"
             alt="dileepa"
             width={600}
             height={500}
-            className="mx-auto mt-24 me object-contain"
+            className="mx-auto mt-24 me object-cover"
+          />
+          <Image
+            src="https://cdn.dribbble.com/userupload/8360050/file/original-1bfa9e1532670a2652b883b4b3ce84cc.png?compress=1&resize=752x564"
+            alt="dileepa"
+            width={600}
+            height={500}
+            className="mx-auto mt-24 me object-cover"
+          />
+          <Image
+            src="https://cdn.dribbble.com/users/2800664/screenshots/9518999/media/39546fed50f659d41e195a2ce937076b.png?compress=1&resize=1600x1200&vertical=center"
+            alt="dileepa"
+            width={600}
+            height={500}
+            className="mx-auto mt-24 me object-cover"
           />
           {/* </div> */}
         </div>
