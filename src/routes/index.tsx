@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
+import { SiteHeader } from '#/components/SiteHeader'
+
 export const Route = createFileRoute('/')({ component: Home })
 
 const ASSETS = {
-  navDivider:
-    'https://www.figma.com/api/mcp/asset/afa35585-51ed-44fd-9b7a-139598c5bbbe',
   linkedin:
     'https://www.figma.com/api/mcp/asset/e3654946-5257-44b7-90e1-c811d80ad423',
   instagram:
@@ -15,65 +15,31 @@ const ASSETS = {
     'https://www.figma.com/api/mcp/asset/684bb8b1-fb88-412f-8663-fa9a265cdd74',
 } as const
 
-const navItems = [
-  { label: 'Home', to: '/' as const },
-  { label: 'About', hash: '#experience' as const },
-  { label: 'Projects', hash: '#projects' as const },
-  { label: 'Resume', hash: '#contact' as const },
-] as const
-
 function Home() {
   return (
     <main className="flex min-h-dvh flex-col items-center bg-neutral-950 pb-60 text-neutral-50">
       <div className="flex w-full max-w-[640px] flex-col gap-12 px-3">
-        <header className="flex w-full flex-col items-end gap-0.5 pt-4 pb-8">
-          <nav
-            aria-label="Primary"
-            className="flex flex-wrap items-center justify-end gap-2.5"
-          >
-            {navItems.map((item) =>
-              'to' in item ? (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  className="px-2.5 py-0.5 text-sm font-normal leading-5 text-neutral-50 decoration-transparent underline-offset-2 transition-colors hover:text-neutral-300"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <a
-                  key={item.label}
-                  href={item.hash}
-                  className="px-2.5 py-0.5 text-sm font-normal leading-5 text-neutral-500 decoration-transparent underline-offset-2 transition-colors hover:text-neutral-300"
-                >
-                  {item.label}
-                </a>
-              ),
-            )}
-          </nav>
-          <div className="relative h-0 w-full shrink-0">
-            <div className="absolute inset-x-0 -top-px bottom-0">
-              <img
-                alt=""
-                className="block size-full max-w-none"
-                src={ASSETS.navDivider}
-                width={640}
-                height={1}
-              />
-            </div>
-          </div>
-        </header>
+        <SiteHeader />
 
-        <section className="flex flex-col gap-0.5" aria-labelledby="hero-name">
-          <p className="w-full text-xs font-light leading-4 tracking-normal text-neutral-50">
-            Your Vision, Engineered.
-          </p>
-          <h1
-            id="hero-name"
-            className="w-full text-5xl font-extralight leading-[48px] tracking-normal text-neutral-50"
-          >
-            Dileepa Chandima
-          </h1>
+        <section className="flex flex-col gap-3" aria-labelledby="hero-name">
+          <img
+            src="/me.png"
+            alt="Portrait of Dileepa Chandima"
+            width={224}
+            height={224}
+            className="size-56 shrink-0 rounded-2xl object-cover"
+          />
+          <div className="flex flex-col gap-0.5">
+            <p className="w-full text-xs font-light leading-4 tracking-normal text-neutral-50">
+              Your Vision, Engineered.
+            </p>
+            <h1
+              id="hero-name"
+              className="w-full text-5xl font-extralight leading-[48px] tracking-normal text-neutral-50"
+            >
+              Dileepa Chandima
+            </h1>
+          </div>
         </section>
 
         <p className="w-full text-base font-normal leading-6 tracking-normal text-neutral-50">
@@ -100,12 +66,12 @@ function Home() {
             robust design systems that accelerate development and elevate UI/UX
             standards.
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/about"
             className="inline-flex w-fit p-0.5 text-xs font-normal leading-4 tracking-normal text-neutral-600 decoration-transparent underline-offset-2 transition-colors hover:text-neutral-400"
           >
             read more about me
-          </a>
+          </Link>
         </section>
 
         <section
@@ -126,12 +92,12 @@ function Home() {
             instantly, proving that great code can foster genuine human
             connection without the pressure of traditional apps.
           </p>
-          <a
-            href="#projects"
+          <Link
+            to="/projects"
             className="inline-flex w-fit p-0.5 text-xs font-normal leading-4 tracking-normal text-neutral-600 decoration-transparent underline-offset-2 transition-colors hover:text-neutral-400"
           >
             my projects
-          </a>
+          </Link>
         </section>
 
         <section
@@ -167,7 +133,7 @@ function Home() {
           </p>
           <div className="flex gap-4 pt-10" aria-label="Social links">
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/dilipchandima/"
               target="_blank"
               rel="noreferrer noopener"
               className="relative size-5 shrink-0"
@@ -182,7 +148,7 @@ function Home() {
               />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/dilipchandima/"
               target="_blank"
               rel="noreferrer noopener"
               className="relative size-5 shrink-0"
@@ -212,7 +178,7 @@ function Home() {
               />
             </a>
             <a
-              href="https://dribbble.com/"
+              href="https://dribbble.com/dilipchandima"
               target="_blank"
               rel="noreferrer noopener"
               className="relative size-5 shrink-0"
