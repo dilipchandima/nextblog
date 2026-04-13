@@ -13,7 +13,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Dilip Chandima',
+        title: 'Dileepa Chandima',
       },
     ],
     links: [
@@ -32,7 +32,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="font-sans antialiased [overflow-wrap:anywhere] bg-white text-zinc-900 selection:bg-blue-100 selection:text-zinc-900">
+      <body className="font-sans antialiased [overflow-wrap:anywhere] bg-neutral-950 text-neutral-50 selection:bg-neutral-700 selection:text-neutral-50">
         {children}
         <Scripts />
       </body>
