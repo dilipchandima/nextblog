@@ -39,5 +39,8 @@
       "esbuild",
       "lightningcss"
     ]
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
