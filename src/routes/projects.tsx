@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
+import { GrayscaleZoomBanner } from '#/components/GrayscaleZoomBanner'
 import { SiteHeader } from '#/components/SiteHeader'
 import { projectExternalHref, projects } from '#/data/projects'
 
@@ -27,19 +28,27 @@ function ProjectsPage() {
             {projects.map((project) => {
               const href = projectExternalHref(project.url)
               return (
-                <li key={project.name} className="flex flex-col gap-3">
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="w-fit text-base font-semibold leading-6 text-neutral-50 underline decoration-solid underline-offset-2 transition-colors hover:text-neutral-300"
-                  >
-                    {project.name}
-                    <span className="sr-only"> (opens in a new tab)</span>
-                  </a>
-                  <p className="text-xs font-normal leading-4 text-neutral-500">
-                    {project.url}
-                  </p>
+                <li key={project.name} className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-0.5">
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="w-fit text-base font-semibold leading-6 text-neutral-50 underline decoration-solid underline-offset-2 transition-colors hover:text-neutral-300"
+                    >
+                      {project.name}
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                    <p className="text-xs font-normal leading-4 text-neutral-500">
+                      {project.url}
+                    </p>
+                  </div>
+                  {'bannerSrc' in project && project.bannerSrc ? (
+                    <GrayscaleZoomBanner
+                      src={project.bannerSrc}
+                      label={project.name}
+                    />
+                  ) : null}
                   <ul className="m-0 flex list-disc flex-col gap-2 ps-5 text-base font-normal leading-6 text-neutral-50 marker:text-neutral-500">
                     {project.highlights.map((point) => (
                       <li key={point}>{point}</li>

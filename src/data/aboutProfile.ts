@@ -44,6 +44,7 @@ export const aboutProfile = {
   experience: [
     {
       company: 'Mad Paws',
+      bannerSrc: '/companies/madpaws.png',
       location: 'Australia',
       role: 'Senior Software Engineer (Remote)',
       period: 'May 2022 - Present',
@@ -57,6 +58,7 @@ export const aboutProfile = {
     },
     {
       company: 'Singlife - Rhino Partners Pte Ltd',
+      bannerSrc: '/companies/rhinopartners.png',
       location: 'Singapore',
       role: 'Senior Software Engineer / Associate Technical Lead (Remote)',
       period: 'June 2019 - April 2022',
@@ -70,6 +72,7 @@ export const aboutProfile = {
     },
     {
       company: 'RocketPhone (VoiceIQ)',
+      bannerSrc: '/companies/rocketphone.jpg',
       location: 'Sri Lanka',
       role: 'Software Engineer',
       period: 'May 2018 - May 2019',
@@ -80,6 +83,7 @@ export const aboutProfile = {
     },
     {
       company: 'General Electric (Transportation)',
+      bannerSrc: '/companies/ge.jpg',
       location: 'Sri Lanka',
       role: 'Software Engineer',
       period: 'November 2016 - May 2018',

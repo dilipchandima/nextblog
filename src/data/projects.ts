@@ -1,6 +1,7 @@
 export const projects = [
   {
     name: "I'm Coming App",
+    bannerSrc: '/projects/comingapp.png',
     url: 'imcomingapp.com',
     highlights: [
       'Directed the end-to-end architecture and feature development for a React Native mobile application, ensuring a scalable, robust codebase designed for long-term growth.',
@@ -11,6 +12,7 @@ export const projects = [
   },
   {
     name: 'Rn-select-date-range',
+    bannerSrc: '/projects/rndateselector.png',
     url: 'https://www.npmjs.com/package/rn-select-date-range',
     highlights: [
       'Architected and maintained a highly customizable React Native date-range selection library, addressing industry-wide limitations in existing packages by offering deep UI adaptability.',

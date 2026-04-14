@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
+import { GrayscaleZoomBanner } from '#/components/GrayscaleZoomBanner'
 import { SiteHeader } from '#/components/SiteHeader'
 import { aboutProfile } from '#/data/aboutProfile'
 
@@ -90,7 +91,10 @@ function AboutPage() {
           </h2>
           <ol className="flex list-none flex-col gap-10 p-0">
             {experience.map((job) => (
-              <li key={`${job.company}-${job.period}`} className="flex flex-col gap-2">
+              <li
+                key={`${job.company}-${job.period}`}
+                className="flex flex-col gap-2"
+              >
                 <div className="flex flex-col gap-0.5">
                   <p className="text-base font-semibold leading-6 text-neutral-50">
                     {job.role}
@@ -102,6 +106,9 @@ function AboutPage() {
                     {job.period}
                   </p>
                 </div>
+                {'bannerSrc' in job && job.bannerSrc ? (
+                  <GrayscaleZoomBanner src={job.bannerSrc} label={job.company} />
+                ) : null}
                 <ul className="m-0 flex list-disc flex-col gap-2 ps-5 text-base font-normal leading-6 text-neutral-50 marker:text-neutral-500">
                   {job.highlights.map((point) => (
                     <li key={point}>{point}</li>
